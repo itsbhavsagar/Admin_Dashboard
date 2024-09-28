@@ -1,0 +1,696 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb;
+}
+
+/* Header Styles */
+.header {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: -18px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  display: flex; 
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.avatar {
+  display: flex; 
+  gap: 15px; 
+  align-items: center; 
+  margin-right: 15px; 
+}
+
+.avatar img {
+  width: 60px; 
+  height: 61.8px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  text-align: left;
+}
+
+.user-name {
+  display: flex; 
+  align-items: center; 
+  gap: 8px;
+}
+
+.user-name h1 {
+  font-size: 18px; 
+  color: #2d3748;
+  margin: 0; /* Remove margin */
+  margin-right: 5px; /* Space between name and icon */
+}
+
+.user-name .dropdown-icon {
+  font-size: 12px; /* Adjust the size of the dropdown icon */
+  color: #2d3748;
+}
+
+.user-info p {
+  color: #718096;
+  font-size: 14px;
+  margin: 5px 0 0 0; /* Space above Admin */
+}
+
+/* Container Flexbox Layout */
+.container {
+  display: flex;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hide hamburger by default */
+  font-size: 28px;
+  color: #0fc8cf;
+  cursor: pointer;
+  padding: 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #0e1b2b;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed; /* Fixes sidebar on left */
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.sidebar.active {
+  transform: translateX(0); /* Show sidebar when active */
+}
+
+.sidebar {
+  transform: translateX(0); /* Ensure sidebar is visible by default */
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 182px;
+  height: 65px;
+}
+
+.menu {
+  margin-top: 80px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menu-item {
+  margin-bottom: 15px;
+}
+
+.plus-sign{
+  margin-left: 30px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.menu-item a:hover {
+  background-color: #16354e;
+}
+
+.menu-item a.active {
+  background-color: #1ea389;
+}
+
+.menu-item i {
+  margin-right: 10px;
+}
+.menu-item .down-arrow {
+  margin-left: 7rem;
+}
+
+.menu-item .icon-right {
+  margin-left: 5.2rem;
+}
+
+.menu-item .icon-user {
+  margin-left: 7rem;
+}
+
+.menu-item .icon-setting {
+  margin-left: 6.3rem;
+}
+
+.menu-item .submenu {
+  margin-left: 20px;
+}
+
+/* Main Content Wrapper */
+.main-content-wrapper {
+  background-color: #dce1ef; /* Grey background */
+  border-radius: 5px;
+  margin-left: 250px; /* Space for the sidebar */
+  padding: 20px; /* Space around the main content */
+  flex-grow: 1;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content {
+    
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+
+/* Project ID */
+.project-header{
+    margin-top: 30px;
+}
+
+.project-number {
+    color: #6E7591;
+}
+
+
+/* Project Header */
+
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px; /* Ensures left alignment */
+    max-width: 1000px; /* Adjust the width accordingly */
+}
+
+.project-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.project-details {
+    display: flex;
+    gap: 63px;
+    margin-bottom: 30px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background-color: #d9f2ee; /* Icon background */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-title {
+    font-size: 14px;
+    color: #6E7591;
+}
+
+.detail-date {
+    font-size: 10px;
+    font-weight: 400;
+    color: #6E7591;
+}
+
+.detail-priority {
+    color: black; /* Red color for high priority */
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+.project-owners {
+    display: flex;
+    gap: 40px;
+}
+
+.owner-item {
+    display: flex;
+    align-items: center;
+}
+
+.owner-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.owner-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.owner-role {
+    font-size: 12px;
+    color: #8c8c8c;
+}
+
+.owner-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+/* Additional Sections */
+.scope-of-work,
+.attachments,
+.communication,
+.comments-section {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.attachments h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.scope-of-work {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0d101c;
+  line-height: 23.4px;
+}
+
+.scope-of-work p {
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6e7591;
+}
+
+.attachment-grid {
+  display: flex;
+  gap: 10px;
+}
+
+.attachment-grid img {
+  width: 127;
+  height: 102;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Communication section */
+.communication {
+  border: 1px solid #dce1ef;
+  margin-top: 20px; /* Space above the communication section */
+}
+
+.communication h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0; /* Remove default margin */
+}
+
+.communication .channel-list {
+  display: flex; /* Use Flexbox for alignment */
+  justify-content: flex-end; /* Align items to the right */
+  margin-top: -20px; /* Space below the heading */
+}
+
+.communication p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6e7591;
+  margin: 0; /* Remove default margin */
+}
+
+/* Deliverables section */
+.deliverables {
+  margin-top: 20px; /* Space above deliverables */
+}
+
+.deliverables h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.deliverables p {
+  margin-top: 10px; /* Space below the paragraph */
+}
+
+/* Date section */
+.date-container {
+  display: flex; /* Use Flexbox to align items */
+  justify-content: space-between; /* Space between date title and number */
+  align-items: center; /* Align items vertically */
+  margin-top: 20px; /* Add space above the date section */
+}
+
+.date {
+  font-size: 16px; /* Date title size */
+  font-weight: 500; /* Match the weight with other headings */
+  margin: 0; /* Remove default margin */
+}
+
+.num-date {
+  font-size: 14px; /* Adjust number date size */
+  color: #6e7591; /* Match your design color */
+}
+
+/* Container for the comment section */
+.add-comment-section {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dce1ef;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Avatar styling */
+.add-comment-section .avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Comment input field */
+.add-comment-section .comment-input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  font-size: 14px;
+  color: #6e7591;
+  background-color: transparent;
+  padding-left: 10px; /* Align text away from border */
+}
+
+/* Send button styling */
+.add-comment-section .send-button {
+  background: none;
+  cursor: pointer;
+  border: none;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 5px;
+  color: #1ea389; /* Arrow icon color */
+  font-size: 18px;
+}
+
+/* Comment Section Button */
+.comments-header {
+  display: flex; /* Use flexbox for layout */
+  margin: 20px 0; /* Vertical margin for the header */
+  justify-content: space-between; /* Distribute space evenly */
+}
+
+.comments-header button {
+  flex: 1; /* Each button takes equal width */
+  padding: 10px; /* Padding for the buttons */
+  border: none; /* Remove border */
+  background-color: #f0f4f8; /* Default background color for buttons */
+  cursor: pointer; /* Pointer on hover */
+  border-radius: 5px 0px 0px 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background change */
+  font-size: 16px; /* Font size for better readability */
+  margin: 0; /* Space between buttons */
+}
+
+.comments-header button:hover {
+  background-color: #e2e8f0; /* Background color on hover */
+}
+
+.comments-header button.active {
+  background-color: #1ea389; /* Active button background color */
+  color: white; /* Active button text color */
+}
+
+.comments-header button:not(.active) {
+  background-color: #e6f5f2; /* Grey color for non-active buttons */
+  color: black; /* Text color for non-active buttons */
+}
+
+
+/* Comments Section Start */
+
+
+.chat-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.message, .reply-message, .reply-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.avatar .avatar-img {
+
+    width: 50px;
+    height: 50px;
+    margin-top: -90px;
+}
+
+.avatar-main, .avatar-3 {
+    margin-right: 20px;
+}
+
+.avatar-1, .avatar-2 {
+    margin-right: 20px;
+    margin-left: 40px;
+}
+
+.reply {
+    font-size: 12px;
+    font-weight: 500;
+    color: #6E7591;
+}
+
+.reply-to {
+    color: #595FF7;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.time {
+    color: #6E7591;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.message-text {
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+}
+  
+
+.reply-line {
+    width: 4px;
+    background-color: #595ff7;
+    height: 100%;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    border-radius: 2px;
+}
+
+.mention {
+    font-size: 14px;
+    color: black;
+    font-weight: 700;
+}
+
+.message-text, .comment-reply{
+    font-weight: 400;
+    font-size: 14px;
+    color: #6E7591;
+}
+
+/* Custom Reply Box */
+
+.custom-reply-box {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 100%;
+    margin-left: 50px;
+    max-width: 60rem;
+}
+
+.custom-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.custom-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.custom-input {
+    flex-grow: 1;
+    border: none;
+    font-size: 14px;
+    padding-left: 10px;
+    color: #333;
+    background-color: transparent;
+    outline: none;
+}
+
+.custom-icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+}
+
+.custom-icon {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.custom-attach {
+    background-image: url('./assets/icons/attachment.png');
+}
+
+.custom-mic {
+    background-image: url('./assets/icons/mic.png');
+}
+
+/* Send Button */
+.custom-send-btn {
+    width: 35px;
+    height: 35px;
+    background-color: #1ea389; 
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* No padding for clean alignment */
+    cursor: pointer;
+}
+
+.custom-send-img {
+    width: 18px; /* Set appropriate width */
+    height: 18px; /* Set appropriate height */
+    filter: brightness(0) invert(1); /* Makes the image white */
+    object-fit: contain;
+}
+
+
+/* For small screens, ensure proper responsiveness */
+@media (max-width: 768px) {
+  .add-comment-section {
+    max-width: 100%;
+  }
+
+  .comment-input {
+    font-size: 12px;
+  }
+
+  .send-button {
+    font-size: 16px;
+  }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .sidebar {
+    width: 100%; /* Full width on mobile */
+    position: absolute; /* Position absolute for mobile */
+    transform: translateX(-100%); /* Hide by default */
+    z-index: 1000; /* Ensure sidebar is on top */
+  }
+
+  .sidebar.active {
+    transform: translateX(0); /* Show sidebar when active */
+  }
+
+  .main-content-wrapper {
+    margin-left: 0; /* Full width for main content */
+    width: 100%; /* Full width for main content */
+  }
+
+  .menu-item {
+    text-align: center; /* Center menu items on mobile */
+  }
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <div class="logo">
+          <img src="./assets/logo/logo.png" alt="Naya CRM Logo" />
+        </div>
+        <nav class="menu">
+          <ul>
+            <li class="menu-item">
+              <a href="#"> <i class="fas fa-home"></i> Dashboard </a>
+            </li>
+            <li class="menu-item">
+              <a href="#"> <i class="fas fa-user-friends"></i> Leads </a>
+            </li>
+            <li class="menu-item">
+              <a href="#"> <i class="fas fa-play-circle"></i> Sequence </a>
+            </li>
+            <li class="menu-item">
+              <a href="#"> <i class="fas fa-cogs"></i> Sequence Automation </a>
+            </li>
+            <li class="menu-item">
+              <a href="#">
+                <i class="fas fa-file-alt"></i> Templates
+                <i class="fa fa-angle-right icon-right"></i>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#"> <i class="fas fa-th"></i> Templates Category </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="active">
+                <i class="fas fa-briefcase"></i> Projects 
+                <span class="plus-sign"><i class="fa-solid fa-square-plus"></i></span>
+                
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#">
+                <i class="fas fa-users"></i> Users
+                <i class="fa fa-angle-right icon-user"></i>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#">
+                <i class="fas fa-tasks"></i> Tasks
+                <i class="fa fa-angle-down down-arrow"></i>
+              </a>
+              <ul class="submenu">
+                <li>
+                  <a href="#"><i class="fas fa-eye"></i> View Tasks</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-plus"></i> New Tasks</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="#"> <i class="fas fa-chart-line"></i> Team Dashboard </a>
+            </li>
+            <li class="menu-item">
+              <a href="#">
+                <i class="fas fa-cog"></i> Setting
+                <i class="fa fa-angle-right icon-setting"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Main Content Wrapper -->
+      <div class="main-content-wrapper">
+        <!-- Header -->
+        <div class="header">
+          <div class="avatar">
+            <img src="./assets/Notifications.png" alt="Notification Icon" />
+            <img src="./assets/images/user-avatar.png" alt="User Avatar" />
+          </div>
+          <div class="user-info">
+            <div class="user-name">
+              <h1>Jas Barar</h1>
+              <i class="fa fa-angle-down"></i>
+            </div>
+            <p>Admin</p>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+          <div class="project-header">
+            <div class="project-id">
+                <span class="project-number">ID: TA-123</span>
+
+             
+            </div>
+           
+            <h1 class="project-title">Here will be the tittle of Project</h1>
+
+            <div class="project-details">
+              <!-- Start Date -->
+              <div class="detail-item">
+                <div class="icon">
+                  <img src="./assets/icons/calendar.png" alt="Start Date" />
+                </div>
+                <div class="text">
+                  <p class="detail-title">Start Date</p>
+                  <p class="detail-date">12/09/2024</p>
+                </div>
+              </div>
+
+              <!-- Deadline -->
+              <div class="detail-item">
+                <div class="icon">
+                  <img src="./assets/icons/calendar.png" alt="Deadline" />
+                </div>
+                <div class="text">
+                  <p class="detail-title">Deadline</p>
+                  <p class="detail-date">12/10/2024</p>
+                </div>
+              </div>
+
+              <!-- Priority -->
+              <div class="detail-item">
+                <div class="icon">
+                  <img src="./assets/icons/priority.png" alt="Priority" />
+                </div>
+                <div class="text">
+                  <p class="detail-priority">High</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-owners">
+              <!-- Client Name -->
+              <div class="owner-item">
+                <img
+                  src="./assets/images/user.png"
+                  alt="Client Name"
+                  class="owner-avatar"
+                />
+                <div class="owner-info">
+                  <p class="owner-role">Client Name</p>
+                  <p class="owner-name">Sam</p>
+                </div>
+              </div>
+
+              <!-- Project Owner -->
+              <div class="owner-item">
+                <img
+                  src="./assets/images/user.png"
+                  alt="Project Owner"
+                  class="owner-avatar"
+                />
+                <div class="owner-info">
+                  <p class="owner-role">Project Owner</p>
+                  <p class="owner-name">Jas Brar</p>
+                </div>
+              </div>
+
+              <!-- Stakeholder -->
+              <div class="owner-item">
+                <img
+                  src="./assets/images/user.png"
+                  alt="Stakeholder"
+                  class="owner-avatar"
+                />
+                <div class="owner-info">
+                  <p class="owner-role">Stakeholder</p>
+                  <p class="owner-name">Avijit</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scope-of-work">
+            <h2>Scope of Work</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+          </div>
+
+          <div class="attachments">
+            <h2>Additional Attachments (3)</h2>
+            <div class="attachment-grid">
+              <img src="/assets/attachment.png" alt="Attachment" />
+              <img src="/assets/attachment.png" alt="Attachment" />
+              <img src="/assets/attachment.png" alt="Attachment" />
+            </div>
+          </div>
+
+          <div class="communication">
+            <h2>Communication Channels</h2>
+            <div class="channel-list">
+              <p>Slack, Microsoft Teams, Google, Zoom</p>
+            </div>
+
+            <div class="deliverables">
+              <h2>Deliverables</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class="date-container">
+                <h2 class="date">Date</h2>
+                <p class="num-date">20/09/2024</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comment Input Field -->
+
+          <div class="add-comment-section">
+            <img
+              src="/assets/images/user.png"
+              alt="User Avatar"
+              class="avatar"
+            />
+            <input
+              type="text"
+              class="comment-input"
+              placeholder="Add comment"
+            />
+            <button class="send-button">
+              <img src="./assets/images/submit.png" alt="" srcset="" />
+            </button>
+          </div>
+
+          <!-- Comment Input Field End -->
+
+          <!-- Comment Section Buttons Start-->
+          <div class="comments-header">
+            <button class="active">Comments</button>
+            <button>Timeline</button>
+            <button>All</button>
+          </div>
+          <!-- Comment Section Buttons End -->
+
+          <!-- Comments Section -->
+
+         
+          <div class="chat-container">
+            <!-- Message 1 -->
+            <div class="message">
+              <div class="avatar-main">
+                <img
+                  class="avatar-img"
+                  src="./assets/images/user.png"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div class="message-content">
+                <div class="username">Mubeen</div>
+                <div class="time">5 mins ago</div>
+                <div class="message-text">
+                  <span class="mention">@Muskan</span> Lorem ipsum dolor sit
+                  amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna ali 👇👇👇👇
+                </div>
+                <div class="reply">Reply <i class="fa-regular fa-face-smile"></i></div>
+              </div>
+            </div>
+
+            <!-- Reply 1 -->
+            <div class="reply-message">
+              <div class="avatar-1">
+                <img src="./assets/images/user.png" alt="" srcset="" />
+              </div>
+              <div class="message-content">
+                <div class="username">Muskan</div>
+                <div class="time">
+                  To <span class="reply-to"> Mubeen</span>, 5 mins ago
+                </div>
+                <div class="message-text">
+                  <div class="reply-line"></div>
+                  <span class="mention"
+                    >@Mubeen
+                    <p class="comment-reply">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      ali👇
+                    </p>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reply 2 -->
+            <div class="reply-message">
+              <div class="avatar-2">
+                <img src="./assets/images/user.png" alt="" srcset="" />
+              </div>
+              <div class="message-content">
+                <div class="username">Jas Brar</div>
+                <div class="time">
+                  To <span class="reply-to"> Muskan</span>, 2 mins ago
+                </div>
+                <div class="message-text">
+                  <span class="mention"
+                    >@Muskan
+                    <p class="comment-reply">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      ali👇👇👇👇
+                    </p></span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Unique Reply Box -->
+            <div class="custom-reply-box">
+              <div class="custom-avatar">
+                <img src="./assets/images/user.png" alt="User Avatar" />
+              </div>
+              <input type="text" placeholder="reply...." class="custom-input" />
+              <div class="custom-icons">
+                <i class="custom-icon custom-attach"></i>
+                <i class="custom-icon custom-mic"></i>
+              </div>
+              <!-- Send Button with custom icon -->
+              <button class="custom-send-btn">
+                <img
+                  src="./assets/icons/send.png"
+                  alt="Send Icon"
+                  class="custom-send-img"
+                />
+              </button>
+            </div>
+
+            <!-- Message 2 -->
+            <div class="message">
+              <div class="avatar-3">
+                <img src="./assets/images/user.png" alt="" srcset="" />
+              </div>
+              <div class="message-content">
+                <div class="username">Jas Brar</div>
+                <div class="time">5 mins ago</div>
+                <div class="message-text">
+                  <span class="mention">@Mubeen</span>
+                  <span class="comment-reply">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    ali👇👇👇👇</span
+                  >
+                </div>
+                <div class="reply">Reply <i class="fa-regular fa-face-smile"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const sidebar = document.getElementById("sidebar");
+
+      hamburger.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+      });
+
+      // Close sidebar when clicking outside of it
+      document.addEventListener("click", (event) => {
+        if (
+          !sidebar.contains(event.target) &&
+          !hamburger.contains(event.target)
+        ) {
+          sidebar.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
