@@ -1,0 +1,240 @@
+/* Mobile Styles (max-width: 576px) */
+@media (max-width: 576px) {
+    .chat-container {
+      padding: 0.625rem; /* 10px */
+    }
+  
+    .username {
+      font-size: 0.875rem; /* 14px */
+    }
+  
+    .message-text {
+      padding: 0.5rem; /* 8px */
+    }
+  
+    .custom-reply-box {
+      align-items: stretch;
+    }
+  
+    .custom-input {
+      font-size: 0.6875rem; /* 11px */
+    }
+  
+    .communication h2 {
+      font-size: 1.125rem; /* 18px */
+    }
+  
+    .channel-list p {
+      margin-top: 1.125rem; /* 18px */
+    }
+  
+    .deliverables p {
+      font-size: 0.75rem; /* 12px */
+    }
+  
+    .attachments {
+      padding: 0.625rem; /* 10px */
+    }
+  
+    .attachments h2 {
+      font-size: 1.125rem; /* 18px */
+    }
+  
+    .attachment-grid {
+      grid-template-columns: repeat(auto-fill, minmax(4.375rem, 1fr)); /* 70px */
+      flex-wrap: wrap;
+    }
+  
+    .project-header {
+      padding-left: 0.3125rem; /* 5px */
+      padding-right: 0.3125rem; /* 5px */
+    }
+  
+    .project-title {
+      font-size: 1.125rem; /* 18px */
+    }
+  
+    .owner-role {
+      font-size: 0.625rem; /* 10px */
+    }
+  
+    .owner-name {
+      font-size: 0.875rem; /* 14px */
+    }
+  }
+  
+  /* Tablet Styles (max-width: 768px) */
+  @media (max-width: 768px) {
+    .header {
+      margin-left: -0.625rem; /* -10px */
+      margin-right: -0.625rem; /* -10px */
+    }
+  
+    .sidebar {
+      width: 100%;
+      position: absolute;
+      transform: translateX(-100%);
+      z-index: 1000;
+    }
+  
+    .sidebar.active {
+      transform: translateX(0);
+    }
+  
+    .main-content-wrapper {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .menu-item {
+      text-align: center;
+    }
+  
+    .add-comment-section {
+      max-width: 100%;
+    }
+  
+    .comment-input {
+      font-size: 0.75rem; /* 12px */
+    }
+  
+    .send-button {
+      font-size: 1rem; /* 16px */
+    }
+  
+    .chat-container {
+      padding: 0.9375rem; /* 15px */
+    }
+  
+    .message,
+    .reply-message,
+    .reply-box {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .avatar-main,
+    .avatar-3,
+    .avatar-1,
+    .avatar-2 {
+      margin: 0;
+    }
+  
+    .message-content {
+      width: 100%;
+    }
+  
+    .username {
+      font-size: 1rem; /* 16px */
+    }
+  
+    .time {
+      font-size: 0.6875rem; /* 11px */
+    }
+  
+    .reply {
+      font-size: 0.75rem; /* 12px */
+    }
+  
+    .custom-reply-box {
+      margin-left: 0;
+      margin-top: 1.25rem; /* 20px */
+      max-width: 100%;
+    }
+  
+    .custom-input {
+      font-size: 0.75rem; /* 12px */
+    }
+  
+    .custom-icon {
+      width: 1.125rem; /* 18px */
+      height: 1.125rem; /* 18px */
+    }
+  
+    .custom-send-btn {
+      width: 1.875rem; /* 30px */
+      height: 1.875rem; /* 30px */
+    }
+  
+    .custom-send-img {
+      width: 1rem; /* 16px */
+      height: 1rem; /* 16px */
+    }
+  
+    .communication h2 {
+      font-size: 1.25rem; /* 20px */
+    }
+  
+    .deliverables h2 {
+      font-size: 1.125rem; /* 18px */
+    }
+  
+    .deliverables p {
+      font-size: 0.875rem; /* 14px */
+    }
+  
+    .attachments {
+      padding: 0.9375rem; /* 15px */
+    }
+  
+    .attachments h2 {
+      font-size: 1.25rem; /* 20px */
+    }
+  
+    .attachment-grid {
+      grid-template-columns: repeat(auto-fill, minmax(4.375rem, 1fr)); /* 70px */
+    }
+  
+    .project-title {
+      font-size: 1.25rem; /* 20px */
+    }
+  
+    .detail-title {
+      font-size: 0.75rem; /* 12px */
+    }
+  
+    .detail-date {
+      font-size: 0.625rem; /* 10px */
+    }
+  
+    .owner-avatar {
+      width: 2.5rem; /* 40px */
+      height: 2.5rem; /* 40px */
+    }
+  
+    .owner-name {
+      font-size: 0.875rem; /* 14px */
+    }
+  }
+  
+  /* Small Laptop Styles (max-width: 992px) */
+  @media (max-width: 992px) {
+    .project-header {
+      padding-left: 0.625rem; /* 10px */
+    }
+  
+    .project-title {
+      font-size: 1.5rem; /* 24px */
+    }
+  
+    .project-details {
+      flex-wrap: wrap;
+      gap: 1.25rem; /* 20px */
+    }
+  
+    .detail-item {
+      justify-content: flex-start;
+    }
+  }
+  
+  /* Large Laptop Styles (max-width: 1200px) */
+  @media (max-width: 1200px) {
+    .project-details {
+      gap: 1.875rem; /* 30px */
+    }
+  
+    .project-owners {
+      gap: 0.625rem; /* 10px */
+    }
+  }
+  
