@@ -14,57 +14,90 @@ body {
   background-color: #ffffff;
   padding: 20px;
   margin-top: -18px;
-  margin-left: -20px;
-  margin-right: -20px;
-  margin-bottom: 20px;
+  margin-left: -3px;
+  margin-right: -8px;
+  margin-bottom: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-
-  display: flex; 
+  display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 .avatar {
-  display: flex; 
-  gap: 15px; 
-  align-items: center; 
-  margin-right: 15px; 
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-right: 15px;
 }
 
 .avatar img {
-  width: 60px; 
+  width: 60px;
   height: 61.8px;
 }
 
 .user-info {
   display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
+  flex-direction: column;
+  align-items: flex-start;
   text-align: left;
 }
 
 .user-name {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   gap: 8px;
 }
 
 .user-name h1 {
-  font-size: 18px; 
+  font-size: 18px;
   color: #2d3748;
-  margin: 0; /* Remove margin */
-  margin-right: 5px; /* Space between name and icon */
+  margin: 0;
+  margin-right: 5px;
 }
 
-.user-name .dropdown-icon {
-  font-size: 12px; /* Adjust the size of the dropdown icon */
-  color: #2d3748;
+.dropdown-icon {
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Animation for rotation */
 }
 
 .user-info p {
   color: #718096;
   font-size: 14px;
-  margin: 5px 0 0 0; /* Space above Admin */
+  margin: 5px 0 0 0;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none; /* Hide the dropdown options */
+  background-color: #ffffff; /* Match header background */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 2.187rem;
+  border: 1px solid #dce1ef;
+  border-radius: 0.3125rem;
+  padding: 10px;
+  position: absolute; /* Position relative to user-info */
+}
+
+.user-info:hover .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 5px 10px;
+  color: #2d3748;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #1ea389;
+  color: #ffffff;
+  border-radius: 0.3125rem;
+}
+
+/* Rotate icon on hover */
+.user-info:hover .dropdown-icon {
+  transform: rotate(180deg); /* Rotate when dropdown is visible */
 }
 
 /* Container Flexbox Layout */
@@ -76,14 +109,14 @@ body {
 .hamburger {
   display: none; /* Hide hamburger by default */
   font-size: 28px;
-  color: #0fc8cf;
+  color: #1ea389;
   cursor: pointer;
   padding: 20px;
 }
 
 /* Sidebar Styles */
 .sidebar {
-  width: 250px;
+  width: auto;
   height: 100vh;
   background-color: #0e1b2b;
   display: flex;
@@ -127,7 +160,7 @@ body {
   margin-bottom: 15px;
 }
 
-.plus-sign{
+.plus-sign {
   margin-left: 30px;
 }
 
@@ -169,7 +202,7 @@ body {
 }
 
 .menu-item .submenu {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 /* Main Content Wrapper */
@@ -177,132 +210,123 @@ body {
   background-color: #dce1ef; /* Grey background */
   border-radius: 5px;
   margin-left: 250px; /* Space for the sidebar */
-  padding: 20px; /* Space around the main content */
+  padding: 12px; /* Space around the main content */
   flex-grow: 1;
   transition: margin-left 0.3s ease;
 }
 
 .main-content {
-    
   background: #ffffff;
   border-radius: 15px;
   padding: 20px;
 }
 
-
 /* Project ID */
-.project-header{
-    margin-top: 30px;
+.project-header {
+  margin-top: 30px;
 }
 
 .project-number {
-    color: #6E7591;
+  color: #6e7591;
 }
 
-
 /* Project Header */
-
-
 .project-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px; /* Ensures left alignment */
-    max-width: 1000px; /* Adjust the width accordingly */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px; /* Ensures left alignment */
+  max-width: 1000px; /* Adjust the width accordingly */
 }
 
 .project-title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .project-details {
-    display: flex;
-    gap: 63px;
-    margin-bottom: 30px;
+  display: flex;
+  gap: 40px; /* Set a consistent gap */
+  margin-bottom: 30px;
 }
 
 .detail-item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .icon {
-    width: 40px;
-    height: 40px;
-    background-color: #d9f2ee; /* Icon background */
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #d9f2ee; /* Icon background */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
 }
 
 .icon img {
-    width: 24px;
-    height: 24px;
-    object-fit: cover;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
 }
 
 .text {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .detail-title {
-    font-size: 14px;
-    color: #6E7591;
+  font-size: 14px;
+  color: #6e7591;
 }
 
 .detail-date {
-    font-size: 10px;
-    font-weight: 400;
-    color: #6E7591;
+  font-size: 10px;
+  font-weight: 400;
+  color: #6e7591;
 }
 
 .detail-priority {
-    color: black; /* Red color for high priority */
-    font-size: 14px;
-    font-weight: 400;
+  color: black; /* Red color for high priority */
+  font-size: 14px;
+  font-weight: 400;
 }
 
-
-
 .project-owners {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 40px; /* Keep a consistent gap between owner items */
 }
 
 .owner-item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .owner-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
 .owner-info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .owner-role {
-    font-size: 12px;
-    color: #8c8c8c;
+  font-size: 12px;
+  color: #8c8c8c;
 }
 
 .owner-name {
-    font-size: 16px;
-    font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
 }
-
-
 
 /* Additional Sections */
 .scope-of-work,
@@ -483,214 +507,171 @@ body {
   color: black; /* Text color for non-active buttons */
 }
 
-
 /* Comments Section Start */
 
-
 .chat-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-.message, .reply-message, .reply-box {
-    display: flex;
-    margin-bottom: 20px;
+.message,
+.reply-message,
+.reply-box {
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .avatar .avatar-img {
-
-    width: 50px;
-    height: 50px;
-    margin-top: -90px;
+  width: 50px;
+  height: 50px;
+  margin-top: -90px;
 }
 
-.avatar-main, .avatar-3 {
-    margin-right: 20px;
+.avatar-main,
+.avatar-3 {
+  margin-right: 20px;
 }
 
-.avatar-1, .avatar-2 {
-    margin-right: 20px;
-    margin-left: 40px;
+.avatar-1,
+.avatar-2 {
+  margin-right: 20px;
+  margin-left: 40px;
 }
 
 .reply {
-    font-size: 12px;
-    font-weight: 500;
-    color: #6E7591;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6e7591;
 }
 
 .reply-to {
-    color: #595FF7;
+  color: #595ff7;
 }
 
 .message-content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .username {
-    font-weight: bold;
-    font-size: 14px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .time {
-    color: #6E7591;
-    font-size: 12px;
-    margin-bottom: 8px;
+  color: #6e7591;
+  font-size: 12px;
+  margin-bottom: 8px;
 }
 
 .message-text {
-    padding: 10px;
-    border-radius: 8px;
-    position: relative;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
 }
-  
 
 .reply-line {
-    width: 4px;
-    background-color: #595ff7;
-    height: 100%;
-    position: absolute;
-    left: -10px;
-    top: 0;
-    border-radius: 2px;
+  width: 4px;
+  background-color: #595ff7;
+  height: 100%;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  border-radius: 2px;
 }
 
 .mention {
-    font-size: 14px;
-    color: black;
-    font-weight: 700;
+  font-size: 14px;
+  color: black;
+  font-weight: 700;
 }
 
-.message-text, .comment-reply{
-    font-weight: 400;
-    font-size: 14px;
-    color: #6E7591;
+.message-text,
+.comment-reply {
+  font-weight: 400;
+  font-size: 14px;
+  color: #6e7591;
 }
 
 /* Custom Reply Box */
 
 .custom-reply-box {
-    margin-top: 40px;
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    padding: 5px 10px;
-    width: 100%;
-    margin-left: 50px;
-    max-width: 60rem;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 100%;
+  margin-left: 50px;
+  max-width: 60rem;
 }
 
 .custom-avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
 }
 
 .custom-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .custom-input {
-    flex-grow: 1;
-    border: none;
-    font-size: 14px;
-    padding-left: 10px;
-    color: #333;
-    background-color: transparent;
-    outline: none;
+  flex-grow: 1;
+  border: none;
+  font-size: 14px;
+  padding-left: 10px;
+  color: #333;
+  background-color: transparent;
+  outline: none;
 }
 
 .custom-icons {
-    display: flex;
-    gap: 15px;
-    margin-right: 10px;
+  display: flex;
+  gap: 15px;
+  margin-right: 10px;
 }
 
 .custom-icon {
-    width: 20px;
-    height: 20px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .custom-attach {
-    background-image: url('./assets/icons/attachment.png');
+  background-image: url("./assets/icons/attachment.png");
 }
 
 .custom-mic {
-    background-image: url('./assets/icons/mic.png');
+  background-image: url("./assets/icons/mic.png");
 }
 
 /* Send Button */
 .custom-send-btn {
-    width: 35px;
-    height: 35px;
-    background-color: #1ea389; 
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0; /* No padding for clean alignment */
-    cursor: pointer;
+  width: 35px;
+  height: 35px;
+  background-color: #1ea389;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* No padding for clean alignment */
+  cursor: pointer;
 }
 
 .custom-send-img {
-    width: 18px; /* Set appropriate width */
-    height: 18px; /* Set appropriate height */
-    filter: brightness(0) invert(1); /* Makes the image white */
-    object-fit: contain;
-}
-
-
-/* For small screens, ensure proper responsiveness */
-@media (max-width: 768px) {
-  .add-comment-section {
-    max-width: 100%;
-  }
-
-  .comment-input {
-    font-size: 12px;
-  }
-
-  .send-button {
-    font-size: 16px;
-  }
-}
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block; /* Show hamburger on mobile */
-  }
-
-  .sidebar {
-    width: 100%; /* Full width on mobile */
-    position: absolute; /* Position absolute for mobile */
-    transform: translateX(-100%); /* Hide by default */
-    z-index: 1000; /* Ensure sidebar is on top */
-  }
-
-  .sidebar.active {
-    transform: translateX(0); /* Show sidebar when active */
-  }
-
-  .main-content-wrapper {
-    margin-left: 0; /* Full width for main content */
-    width: 100%; /* Full width for main content */
-  }
-
-  .menu-item {
-    text-align: center; /* Center menu items on mobile */
-  }
+  width: 18px; /* Set appropriate width */
+  height: 18px; /* Set appropriate height */
+  filter: brightness(0) invert(1); /* Makes the image white */
+  object-fit: contain;
 }
